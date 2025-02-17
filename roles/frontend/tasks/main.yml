@@ -1,4 +1,8 @@
 - name: disable the nignx
   ansible.builtin.shell: dnf module disable nginx -y
+- name: enable the nginx
+  ansible.builtin.shell: dnf module enable nginx:1.24 -y
+
+    
 
   
