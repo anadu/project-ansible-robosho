@@ -28,11 +28,6 @@
     name: nginx
     state: restarted
     enabled: true               
-- name: Enable service httpd and ensure it is not masked
-  ansible.builtin.systemd_service:
-    name: mongod
-    state: restarted
-    enabled: true  
-    
+
 
   
