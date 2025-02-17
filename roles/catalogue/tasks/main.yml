@@ -1,4 +1,4 @@
 - name: include apt tasks
   include_role:
-      name: coomon role
+      name: commmon role
       tasks_from: nodejs
