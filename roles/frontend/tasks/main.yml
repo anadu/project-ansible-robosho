@@ -9,7 +9,8 @@
 -  name: Copy the file from nginx
    ansible.builtin.copy:
     src: nginx.conf
-    dest: /etc/nginx/nginx.conf  
+    dest: /etc/nginx/nginx.conf
+    remote_src: yes  
 
     
 
