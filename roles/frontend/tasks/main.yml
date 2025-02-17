@@ -10,7 +10,25 @@
   ansible.builtin.copy:
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
-    remote_src: yes  
+    remote_src: yes 
+- name: Recursively remove directory
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/
+    state: absent 
+- name: create a directory
+  ansible.builtin.file:
+    path: /usr/share/nginx/html/
+    state: directory
+- name: download and extract 
+  ansible.builtin.unarchive:
+    src: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+    dest: /usr/share/nginx/html/
+    remote_src: yes 
+- name: Enable service httpd and ensure it is not masked
+  ansible.builtin.systemd_service:
+    name: nginx
+    state: restarted
+    enabled: true               
 
     
 
