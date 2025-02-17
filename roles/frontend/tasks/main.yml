@@ -6,6 +6,10 @@
   ansible.builtin.dnf:
     name: nginx
     state: installed
+-  name: Copy the file from nginx
+   ansible.builtin.copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf  
 
     
 
