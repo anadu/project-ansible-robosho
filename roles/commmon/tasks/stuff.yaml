@@ -8,4 +8,4 @@
 - name : create the directory
   ansible.builtin.file:
     path: /app
-    state: installed        
+    state: directory       
