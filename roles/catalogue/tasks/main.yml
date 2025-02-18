@@ -2,3 +2,9 @@
   include_role:
       name: commmon
       tasks_from: nodejs
+- name: copy the file to the mongo mongo.repo
+  ansible.builtin.dnf:
+    - name: mongodb-mongosh
+      state: installed
+- name: mongodb-mongosh
+  ansible.builtin.shell: mongosh --host 10.0.0.6 </app/db/master-data.js      
