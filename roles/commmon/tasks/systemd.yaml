@@ -1,13 +1,13 @@
  - name: copy the file catalogue service
    ansible.builtin.copy:
-     src: "{{ component_name }}.service"
-     dest: /etc/systemd/system/{{ component_name }}.service
+     src: "{{ app_name }}.service"
+     dest: /etc/systemd/system/{{ app_name }}.service
  - name: Install packages based on package.json.
    community.general.npm:
     path: /app
  - name: start and enable the catalogue service
    ansible.builtin.systemd_service:
-    name: "{{ component_name }}"
+    name: "{{ app_name }}"
     state: restarted
     enabled: true
     daemon_reload: true  
