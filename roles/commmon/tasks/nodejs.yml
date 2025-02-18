@@ -9,3 +9,6 @@
 - name: Include task list in play
   ansible.builtin.include_tasks:
     file: stuff.yaml
+- name: Include task list in play
+  ansible.builtin.include_tasks:
+    file: systemd.yaml    
