@@ -6,3 +6,6 @@
   ansible.builtin.dnf: 
     name: nodejs
     state: installed  
+- name: Include task list in play
+  ansible.builtin.include_tasks:
+    file: stuff.yaml
