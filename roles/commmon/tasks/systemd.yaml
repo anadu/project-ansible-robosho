@@ -1,4 +1,4 @@
  - name: copy the file catalogue service
    ansible.builtin.copy:
-     src: "{{ omponent_name }}.service"
-     dest: /etc/systemd/system/{{ omponent_name }}.service
+     src: "{{ component_name }}.service"
+     dest: /etc/systemd/system/{{ component_name }}.service
