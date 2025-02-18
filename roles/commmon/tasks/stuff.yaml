@@ -1,0 +1,11 @@
+- name: application user
+  ansible.builtin.user:
+    name: roboshop
+- name: remove the directory
+  ansible.builtin.file:
+    path: /app
+    state: absent
+- name : create the directory
+  ansible.builtin.file:
+    path: /app
+    state: installed        
