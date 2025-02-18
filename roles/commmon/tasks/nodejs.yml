@@ -3,4 +3,6 @@
 - name: enable the nodejs
   ansible.builtin.shell: dnf module enable nodejs:20 -y
 - name: install the nodejs
-  ansible.builtin.dnf: dnf install nodejs -y  
+  ansible.builtin.dnf: 
+    name: nodejs
+    state: installed  
