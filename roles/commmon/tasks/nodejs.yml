@@ -1,3 +1,6 @@
-- name: debug
-  ansible.builtin.debug:
-    msg: "helloworld"
+- name: disable the nodejs
+  ansible.builtin.shell: dnf module disable nodejs -y
+- name: enable the nodejs
+  ansible.builtin.shell: dnf module enable nodejs:20 -y
+- name: install the nodejs
+  ansible.builtin.dnf: dnf install nodejs -y  
